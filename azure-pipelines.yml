@@ -1,0 +1,32 @@
+trigger:
+- main
+
+variables:
+  username: 'azureuser'
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+stages:
+- stage: A
+  jobs:
+  - job: A1
+    displayName: Alpha 1
+    steps:
+    - bash: echo "Alpha 1"
+  - job: A2
+    displayName: Alpha 2
+    steps:
+    - bash: echo "Alpha 2 - Step 1"
+    - bash: echo "Alpha 2 - Step 2"
+
+- stage: B
+  jobs:
+  - job: B1
+    displayName: Beta 1
+    steps:
+    - bash: echo "Beta 1"
+  - job: B2
+    displayName: Beta 2
+    steps:
+    - bash: echo "Beta 1"
