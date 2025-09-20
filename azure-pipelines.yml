@@ -21,6 +21,7 @@ stages:
     - bash: echo "Alpha 2 - Step 2"
 
 - stage: B
+  trigger: none
   jobs:
   - job: B1
     displayName: Beta 1
